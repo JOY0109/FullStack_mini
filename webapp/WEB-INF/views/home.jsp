@@ -4,57 +4,70 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>JOY0109</title>
+<title>2nd class</title>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+   
+    <!-- #region Jssor Slider Begin -->
+    <!-- Generator: Jssor Slider Maker -->
+    <!-- Source: https://www.jssor.com -->
+<!--     <script src="js/jssor.slider.min.js" type="text/javascript"></script> -->
+    <script src="/js/jssor.slider.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        jssor_1_slider_init = function() {
 
-<script src="/js/jssor.slider.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-    jssor_1_slider_init = function() {
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $Idle: 2000,
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
 
-        var jssor_1_options = {
-          $AutoPlay: 1,
-          $Idle: 2000,
-          $ArrowNavigatorOptions: {
-            $Class: $JssorArrowNavigator$
-          },
-          $BulletNavigatorOptions: {
-            $Class: $JssorBulletNavigator$
-          }
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 1300;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+			
+		     
         };
+		
+	
+    </script>
+	
+<style>
+ <%@include file="/WEB-INF/resources/css/mainSlide.css" %>
+</style>	
 
-        var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
-        /*#region responsive code begin*/
-
-        var MAX_WIDTH = 1300;
-
-        function ScaleSlider() {
-            var containerElement = jssor_1_slider.$Elmt.parentNode;
-            var containerWidth = containerElement.clientWidth;
-
-            if (containerWidth) {
-
-                var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
-
-                jssor_1_slider.$ScaleWidth(expectedWidth);
-            }
-            else {
-                window.setTimeout(ScaleSlider, 30);
-            }
-        }
-
-        ScaleSlider();
-
-        $Jssor$.$AddEvent(window, "load", ScaleSlider);
-        $Jssor$.$AddEvent(window, "resize", ScaleSlider);
-        $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
-        /*#endregion responsive code end*/
-    
-     };
-</script>
+</head>
 <!--슬라이드 서브 메뉴 다운-->
-<script>
+	<script>
 	$(document).on('mouseover', '#header', function () {
      $('#sub_Box01').slideDown(200);
 	});
@@ -63,48 +76,63 @@
 	  $('#sub_Box01').slideUp(200);
 		
 	});
-</script>
-	
-<style>
-  <%@include file="/WEB-INF/resources/css/mainSlide.css" %>
-</style>	
 
-</head>
 
+	</script>
 	
 <body>
+	
 	<div id="bigBox">
 		<ul id="header">
 			<li class="menu">
-				<a class="menu" href="/List">슈퍼배드</a>
+				<a class="menu" href="">
+					슈퍼배드 
+				</a>
 			</li>
 			<li class="menu">
-				<a class="menu" href="">미니언즈</a> 
+				<a class="menu" href="">
+					미니언즈
+				</a> 
 			</li>
 			<li class="menu">
+				
 					<img src="https://simage-kr.uniqlo.com/display/corner/2162/19SS_UT_Minions_190311-SquareImage_GL.jpg" height="150">
+				 
 			</li>
 			<li class="menu">
-				<a class="menu" href="">게시판</a>
+				<a class="menu" href="">
+					gma?
+				</a>
 			</li>
 			<li class="menu">
-				<a class="menu" href="">올랜도</a>
+				<a class="menu" href="">
+					올랜도
+				</a>
 			</li>
 		</ul>
 	</div>	
 	<div id="sub_Box01">
 		<ul id="sub_header">
 			<li class="sub_menu">
-				<a href="">01서브</a>
+				<a href="">
+					01서브  
+				</a>
 			</li>
 			<li class="sub_menu">
-				<a href="">02서브</a> 
+				<a href="">
+					02서브  
+				</a> 
+			</li>
+
+			<li class="sub_menu">
+				<a href="">
+					03서브
+				</a>
 			</li>
 			<li class="sub_menu">
-				<a href="">03서브</a>
-			</li>
-			<li class="sub_menu">
-				<a href="">04서브</a>
+				<a href="">
+					04서
+				</a>
 			</li>
 		</ul>
 	  </div>	
